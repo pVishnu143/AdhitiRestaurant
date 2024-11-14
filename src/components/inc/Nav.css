@@ -1,0 +1,112 @@
+.active{
+    background-color:#535252;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:transparent;
+    position: fixed;
+    top: 8px;
+    z-index: 1000;
+    height: 60px;
+    width: 100%;
+    padding-left: 25px;
+
+
+}
+nav li.title{
+    color: black;
+    background-color: transparent;
+    font-size: 60px;
+text-decoration: none;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    padding: 10px;
+}
+nav ul li input{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 20px;
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-top: 4px;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 8px;
+
+}
+
+nav ul li a:not(.active):hover{
+    background-color: gray;
+}
+.menu{
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 35px;
+}
+.menu span{
+    height: 4px;
+    width: 80%;
+    background-color: black;
+    border-radius: 4px;
+}
+.title img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+@media (max-width:580px){
+    .menu{
+        display: flex;
+    }
+    nav{
+
+        flex-direction: column;
+        align-items: start;
+        height: 50px;
+    }
+    nav ul{
+        display: none;
+        background-color: rgb(190, 188, 188);
+        flex-direction: column;
+        width: 80%;
+        margin-bottom: 4px;
+        border-radius: 20px;
+        position: fixed;
+        top: 50px;
+        height: fit-content;
+    }
+    nav ul.open{
+        display: flex;
+    }
+    nav ul li {
+        width: 80%;
+        text-align: center;
+        margin: 2px 0;
+    }
+
+    nav ul li a {
+        margin: 0; 
+        padding: 0px 0;
+        display: block;
+    }
+}
+
+.main-content {
+    padding-top: 80px;
+}

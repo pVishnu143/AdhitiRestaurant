@@ -1,0 +1,199 @@
+.heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+}
+
+.heading h1:hover {
+    font-weight: 800;
+}
+
+.gallery {
+    background-color: rgb(248, 237, 224);
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.gallery .box-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(330px, 480px));
+    gap: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+}
+
+.gallery .box-container .box {
+    overflow: hidden;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, .1);
+    border: 3px solid #333;
+    border-radius: 20px;
+    height: 300px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.gallery .box-container .box:hover {
+    transform: scale(1.05);
+}
+
+.gallery .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery .box-container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery .box-container .box:hover .content {
+    opacity: 1;
+}
+
+.gallery .box-container .box .content h3 {
+    font-size: 24px;
+    color: orange;
+}
+
+.gallery .box-container .box .content p {
+    font-size: 18px;
+    color: #eee;
+    padding: 10px 0;
+}
+
+.name figcaption {
+   font-weight: 600; 
+   font-size: 30px; 
+}
+
+@media (max-width: 580px) {
+   .hero {
+    padding: 25px 10px;
+}
+
+.hero h1 {
+    font-size: 24px;
+}
+
+.gallery {
+    background-color: rgb(248, 237, 224);
+    width: 100%;
+    height: auto;
+}
+
+.gallery .box-container .box {
+    height: 200px;
+    left: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .box-container .box .content h3 {
+    font-size: 15px;
+    left: 40px;
+}
+
+.gallery .box-container .box .content p {
+    font-size: 13px;
+    left: 20px;
+}
+
+.btn {
+    padding: 6px 16px;
+    font-size: 14px;
+}
+
+.gallery .box-container {
+    grid-template-columns: 1fr;
+}
+
+.gallery .box-container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery .box-container .box:hover .content {
+    opacity: 1;
+}
+
+.gallery .box-container .box:hover {
+    transform: scale(1.05);
+}
+}
+
+.gallery .btn {
+   display:block; 
+   width:auto; 
+   margin-top :16px; 
+   background-color:#333; 
+   color:#fff; 
+   padding :10px ; 
+   border:none; 
+   border-radius :5px ; 
+   text-decoration:none; 
+   cursor:pointer; 
+   font-size :16px ; 
+   transition :background-color .3 s ;
+}
+
+.btn-link{
+   text-decoration:none; 
+}
+
+.gallery .btn:hover {
+   background-color:#ff8800; 
+   color:#fff; 
+}
+.search-input {
+   width :calc(30% -20px ); 
+   padding :10px ; 
+   margin-bottom :20px ; 
+   margin-top :10px ; 
+   border-radius :20px ; 
+   border :1px solid #ccc ;
+   transition :width .3 s ease ;
+}
+@media (max-width :768px ) {
+   .search-input { 
+       width :calc(50% -20px );  
+       padding :8px ;  
+   }
+}
+@media (max-width :580px ) {  
+   .search-input {  
+       width :calc(100% -20px );  
+       padding :8px ;  
+       margin-top :15px ;  
+   }
+}
